@@ -511,8 +511,6 @@ angular.module('Magellan').directive('concourseApplicationTree', function(
 					anchor.setAttribute('title', module.hint);
 				}
 
-				var b = 4;
-
 				var titleOuterDiv = document.createElement('div');
 				anchor.appendChild(titleOuterDiv);
 				titleOuterDiv.className = 'sn-widget-list-content';
