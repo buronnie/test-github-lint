@@ -19,6 +19,8 @@ angular.module('Magellan').directive('concourseApplicationTree', function(
 	// defer longer DOM paint until after more components load
 	var ITEM_HEIGHT = 40;
 
+	var cccc = 10;
+
 	return {
 		restrict: 'E',
 		templateUrl: getTemplateUrl('concourse_application_tree.xml'),

@@ -4,6 +4,9 @@ module.exports = {
         "commonjs": true,
         "es6": true
     },
-    "extends": "airbnb"
+		"extends": "airbnb",
+		"rules": {
+			"no-tabs": 0
+		}
 };
 
