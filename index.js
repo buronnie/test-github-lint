@@ -43,7 +43,7 @@ angular.module('Magellan').directive('concourseApplicationTree', function(
 			$scope.getApplicationStyles = getApplicationStyles;
 			$scope.getModuleDisplayType = _getModuleDisplayType;
 			$scope.canEdit = concourseNavigatorService.canEdit;
-
+			var a = 1;
 			/**
 			 * Event delegation to render down applications on expand
 			 * Also handles repainting items that jump into view after
@@ -510,6 +510,8 @@ angular.module('Magellan').directive('concourseApplicationTree', function(
 				if (module.hint) {
 					anchor.setAttribute('title', module.hint);
 				}
+
+				var b = 4;
 
 				var titleOuterDiv = document.createElement('div');
 				anchor.appendChild(titleOuterDiv);
