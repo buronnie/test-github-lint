@@ -19,6 +19,28 @@ angular.module('Magellan').directive('concourseApplicationTree', function(
 	// defer longer DOM paint until after more components load
 	var ITEM_HEIGHT = 40;
 
+	var cccc = 10;
+	const changedLineNumbers = hunk.forEach(line => {
+		if (line.startsWith('-')) {
+			lineNumberInDiff += 1;
+			return;
+		}
+
+		if (!firstAtSymbol) {
+			lineNumberInDiff += 1;
+		}
+
+		if (line.startsWith('@@')) {
+			lineNumberInOriginalFile = Number(line.match(/\+([0-9]+)/)[1]) - 1;
+			firstAtSymbol = false;
+			return;
+		}
+		lineNumberInOriginalFile += 1;
+
+		if (line.startsWith('+')) {
+			lineNumbers[lineNumberInOriginalFile] = lineNumberInDiff;
+		}
+	});
 	return {
 		restrict: 'E',
 		templateUrl: getTemplateUrl('concourse_application_tree.xml'),
@@ -43,7 +65,7 @@ angular.module('Magellan').directive('concourseApplicationTree', function(
 			$scope.getApplicationStyles = getApplicationStyles;
 			$scope.getModuleDisplayType = _getModuleDisplayType;
 			$scope.canEdit = concourseNavigatorService.canEdit;
-
+			var a = 1;
 			/**
 			 * Event delegation to render down applications on expand
 			 * Also handles repainting items that jump into view after
