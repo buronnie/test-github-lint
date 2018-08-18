@@ -4,10 +4,6 @@ const changedLineNumbers = [1, 2, 3].forEach(line => {
 		return;
 	}
 
-	if (!firstAtSymbol) {
-		lineNumberInDiff += 1;
-	}
-
 	if (line.startsWith('@@')) {
 		lineNumberInOriginalFile = Number(line.match(/\+([0-9]+)/)[1]) - 1;
 		firstAtSymbol = false;
