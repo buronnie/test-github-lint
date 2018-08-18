@@ -10,6 +10,7 @@ const changedLineNumbers = [1, 2, 3].forEach(line => {
 	}
 
 	var a = 1;
+	var b = 1;
 
 	if (line.startsWith('+')) {
 		lineNumbers[lineNumberInOriginalFile] = lineNumberInDiff;
