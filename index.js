@@ -1,9 +1,9 @@
 function foo() {
 	const a = 1;
-	const b = 2;
+	let b = 2;
 	const c = 3;
-	const d = 4;
-
+	if (a === 1)
+		b = 3;
 	return a + b + c;
 }
 
