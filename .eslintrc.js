@@ -4,8 +4,5 @@ module.exports = {
 			"commonjs": true,
 			"es6": true
 	},
-	"extends": "eslint:recommended",
-	"rules": {
-		"curly": ["all"]
-	}
+	"extends": "airbnb"
 };
